@@ -7,3 +7,4 @@ My applications built in **Portugal**.
 ## Applications
 
 1. Password generator :closed_lock_with_key: 
+2. Contador de vogais :open_book:
