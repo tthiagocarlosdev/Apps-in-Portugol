@@ -6,40 +6,72 @@
  * 
  * GERADOR DE SENHA
  * 	Utilizado a tabela ASCII
+ * 	Conter ao menos:
+ * 		- 6 caracteres;
+ * 		- Letras maiúsculas;
+ * 		- Letras minúsculas;
+ * 		- Números;
+ * 		- Símbolos.
   */
   
 programa
 {
+	inclua biblioteca Tipos	
 	inclua biblioteca Util
-	funcao inicio()
-	{
+	
+	funcao topo(){
+			escreva("--------------------------------\n")
+			escreva("------- GERADOR DE SENHA -------\n")
+			escreva("--------------------------------\n")						
+	}
+		
+	funcao inicio(){
 		inteiro ascii[93], t
 		caracter senha[93]
-
-		escreva("--------------------------------\n")
-		escreva("------- GERADOR DE SENHA -------\n")
-		escreva("--------------------------------\n")
+		logico letra
+		cadeia cad
+		
+		topo()
 		escreva("Digite o tamanho de sua senha [6-91]: ")
-		leia(t)
+		leia(cad)
 		escreva("--------------------------------\n")
+
+		//validação de inteiro
+		letra = Tipos.cadeia_e_inteiro(cad, 10)
+		enquanto(letra == falso){
+			limpa()
+			escreva("==== ATENÇÃO! ====\n")
+			escreva("Valor incorreto!\n")
+			escreva("Digite outro valor [6-91]: ")
+			leia(cad)
+			letra = Tipos.cadeia_e_inteiro(cad, 10)
+		}
+		
+		//validação do tamanho da senha
+		t = Tipos.cadeia_para_inteiro(cad, 10)
 		enquanto (t < 6 ou t > 91){
+			limpa()
 			se (t < 6){
+				escreva("==== ATENÇÃO! ====\n")
 				escreva("Valor menor que 6, senha muito insegura!\n")
 				escreva("Digite outro valor [6-91]: ")
 				leia(t)
 			}
 			senao se (t > 91){
+				escreva("==== ATENÇÃO! ====\n")
 				escreva("Valor indisponível!\n")
 				escreva("Digite outro valor [6-91]: ")
-				leia(t)	
+				leia(t)
 			}
 		}
 		
 		limpa()
 		
+		//sorteio do valores da escala ascii
 		para(inteiro c = 0; c < t; c++) {
 			ascii[c] = Util.sorteia(33, 126)
-	
+		
+		//validação para não repetir caracteres na senha
 			para (inteiro a = 0; a < t-1; a++){
 				para (inteiro b = a+1; b < t; b++){
 					enquanto (ascii[a] == ascii[b] ou ascii[a] == 39 ou ascii[a] == 92 ou ascii[b] == 39 ou ascii[b] == 92){
@@ -50,7 +82,8 @@ programa
 					
 				}
 			}		
-			
+		
+		//confecção de senha a partir da tabela ascii	
 			se (ascii[c] == 33){
 				senha[c] = '!'
 			}
@@ -337,13 +370,13 @@ programa
 			}
 		}
 
-		
-		escreva("--------------------------------\n")
-		escreva("------- GERADOR DE SENHA -------\n")
-		escreva("--------------------------------\n")
+		//revelando a senha
+		topo()
+		escreva("A senha contém ", t, " caracteres!\n")
 		escreva("Sua senha é: ")
 		para(inteiro i = 0; i < t; i++) {
 			escreva(senha[i], "")}
+		escreva("\n--------------------------------")
 		escreva("\n")
 	}
 }
@@ -353,9 +386,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 886; 
+ * @POSICAO-CURSOR = 326; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
+ * @SIMBOLOS-INSPECIONADOS = {t, 29, 21, 1}-{letra, 31, 9, 5}-{cad, 32, 9, 3};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
