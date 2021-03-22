@@ -19,9 +19,22 @@ programa
 		escreva("--------------------------------\n")
 		escreva("------- GERADOR DE SENHA -------\n")
 		escreva("--------------------------------\n")
-		escreva("Digite o tamanho de sua senha: ")
+		escreva("Digite o tamanho de sua senha [6-91]: ")
 		leia(t)
-
+		escreva("--------------------------------\n")
+		enquanto (t < 6 ou t > 91){
+			se (t < 6){
+				escreva("Valor menor que 6, senha muito insegura!\n")
+				escreva("Digite outro valor [6-91]: ")
+				leia(t)
+			}
+			senao se (t > 91){
+				escreva("Valor indisponível!\n")
+				escreva("Digite outro valor [6-91]: ")
+				leia(t)	
+			}
+		}
+		
 		limpa()
 		
 		para(inteiro c = 0; c < t; c++) {
@@ -340,9 +353,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3; 
+ * @POSICAO-CURSOR = 886; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {ascii, 16, 10, 5}-{t, 16, 21, 1}-{senha, 17, 11, 5};
+ * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
