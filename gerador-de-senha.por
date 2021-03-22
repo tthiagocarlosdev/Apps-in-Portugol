@@ -1,3 +1,13 @@
+/* 
+ *  Thiago Carlos, estudante de programação.
+ * - GitHub: https://github.com/tthiagocarlosdev​
+ * - Instagram: https://www.instagram.com/tthiagocarlos.dev/​
+ * - Gmail: tthiagocarlos.dev@gmail.com
+ * 
+ * GERADOR DE SENHA
+ * 	Utilizado a tabela ASCII
+  */
+  
 programa
 {
 	inclua biblioteca Util
@@ -330,9 +340,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 6181; 
+ * @POSICAO-CURSOR = 3; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {ascii, 6, 10, 5}-{t, 6, 21, 1}-{senha, 7, 11, 5};
+ * @SIMBOLOS-INSPECIONADOS = {ascii, 16, 10, 5}-{t, 16, 21, 1}-{senha, 17, 11, 5};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
