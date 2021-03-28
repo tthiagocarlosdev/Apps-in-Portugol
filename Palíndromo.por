@@ -1,33 +1,33 @@
 programa
 {
-	inclua biblioteca Texto --> t
-	funcao inicio()
-	{
-		cadeia frase1, frase2, p2 = ""
-		inteiro q_c
-		caracter palindromo[255]
-		
-		
-		escreva("Digite uma frase: ")
-		leia(frase1)
-		
-		frase2 = t.substituir(frase1, " ", "")
-		
-		q_c = t.numero_caracteres(frase2)
+	inclua biblioteca Texto --> t
+	funcao cadeia palindromo(cadeia texto){
+		cadeia texto_sem_espaco = t.substituir(texto, " ", "")
+		inteiro q_c = t.numero_caracteres(texto_sem_espaco)
+		caracter palindromo_inicial[255]
+		cadeia palindromo_final = ""
 		
 		para(inteiro c = q_c - 1; c >= 0; c--){
-			 palindromo[c] = t.obter_caracter(frase2, c)
-			 p2 = p2 + palindromo[c]
+			 palindromo_inicial[c] = t.obter_caracter(texto_sem_espaco, c)
+			 palindromo_final = palindromo_final + palindromo_inicial[c]
 		}
-		
-		se(frase2 == p2){
-			escreva("Palindromo!\n")
-			escreva(frase2, " = ", p2)
+
+		cadeia resultado_final
+		se(texto_sem_espaco == palindromo_final){
+				resultado_final = "Palíndromo!\n"+texto_sem_espaco+" = "+palindromo_final			
 		}
 		senao{
-			escreva("Não Palíndromo!\n")
-			escreva(frase2, " != ", p2)
+			resultado_final = "Não Palíndromo!\n"+texto_sem_espaco+" != "+palindromo_final		
 		}
+		retorne resultado_final
+	}
+	
+	funcao inicio(){
+	cadeia frase
+				
+	escreva("Digite uma frase: ")
+	leia(frase)
+	escreva(palindromo(frase))
 		
 	}
 }
@@ -36,9 +36,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 566; 
+ * @POSICAO-CURSOR = 830; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {p2, 6, 25, 2}-{q_c, 7, 10, 3}-{palindromo, 8, 11, 10}-{c, 18, 15, 1};
+ * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
