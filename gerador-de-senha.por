@@ -1,5 +1,6 @@
 /* 
- *  Thiago Carlos, estudante de programação.
+ *  Programa desenvolvido por Thiago Carlos, estudante de programação.
+ *  Contatos:
  * - GitHub: https://github.com/tthiagocarlosdev​
  * - Instagram: https://www.instagram.com/tthiagocarlos.dev/​
  * - Gmail: tthiagocarlos.dev@gmail.com
@@ -386,9 +387,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 326; 
+ * @POSICAO-CURSOR = 88; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {t, 29, 21, 1}-{letra, 31, 9, 5}-{cad, 32, 9, 3};
+ * @SIMBOLOS-INSPECIONADOS = {t, 30, 21, 1}-{letra, 32, 9, 5}-{cad, 33, 9, 3};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
