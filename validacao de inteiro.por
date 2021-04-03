@@ -23,12 +23,10 @@ programa
 	
 	inclua biblioteca Tipos --> t
 	funcao inteiro valida_numero(cadeia Num){
-		//cadeia Num
+		
 		logico teste
 		inteiro NumA
 		
-		//escreva("Digite um número: ")
-		//leia(Num)
 		//validação de número
 		teste = t.cadeia_e_inteiro(Num, 10)
 		enquanto (teste == falso){
@@ -49,7 +47,7 @@ programa
 	}
 
 	
-	funcao inicio(){
+	funcao inicio(){
 	cadeia A
 	inteiro B
 	escreva("Digite A: ")
@@ -64,7 +62,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 244; 
+ * @POSICAO-CURSOR = 863; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

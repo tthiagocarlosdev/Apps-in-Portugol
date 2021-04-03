@@ -49,15 +49,15 @@ programa {
         	escreva("[3] PAPEL\n")
         	leia(jogada1a)
         	jogada1b = valida_numero(jogada1a)
-        	
         	limpa()
+        	
         	escreva("Jogador ", nome2, " escolha sua jogada: \n")
         	escreva("[1] PEDRA\n")
         	escreva("[2] TESOURA\n")
         	escreva("[3] PAPEL\n")
         	leia(jogada2a)
        	jogada2b = valida_numero(jogada2a)
-       	
+       	limpa()
         
         //pedra
         se (jogada1b == 1 e jogada2b == 1){
@@ -123,7 +123,7 @@ papel = 3		3x3 = x | 3x1 = 3 | 3x2 = 2
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1141; 
+ * @POSICAO-CURSOR = 65; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
