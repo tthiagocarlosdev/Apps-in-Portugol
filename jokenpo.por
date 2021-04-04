@@ -1,34 +1,20 @@
 programa {
 	
-	inclua biblioteca Tipos --> t
-	funcao inteiro valida_numero(cadeia Num){
-		//cadeia Num
-		logico teste
-		inteiro NumA
-		
-		//validação de número
-		teste = t.cadeia_e_inteiro(Num, 10)
-		enquanto (teste == falso){
-			limpa()
+	inclua biblioteca Tipos
+	funcao inteiro valida_numero(cadeia A){
+		inteiro B = 0
+		enquanto (A != "1" e A != "2" e A != "3"){
+			escreva("VALOR ERRADOR!")
 			escreva("Digite um número: ")
-			leia(Num)	
-			teste = t.cadeia_e_inteiro(Num, 10)
+			leia(A)
 		}
-		//validação de valores
-		NumA = t.cadeia_para_inteiro(Num, 10)
-		enquanto (NumA < 1 ou NumA > 3){
-			limpa()
-			escreva("Digite um número: ")
-			leia(Num)
-			NumA = t.cadeia_para_inteiro(Num, 10)
-		}
-		retorne NumA
+		B = (Tipos.cadeia_para_inteiro(A, 10))
+		retorne B
 	}
 
-	
 	funcao inicio() {
-        inteiro jogador1, jogador2, jogada1b, jogada2b
-        cadeia nome1, nome2, jogada1a, jogada2a
+        inteiro placarA, placarB, jogadaA_int, jogadaB_int
+        cadeia nome1, nome2, jogadaA, jogadaB
         caracter resposta
         
        escreva("Jogador nº 1, digite seu nome: ")
@@ -39,68 +25,78 @@ programa {
 	  limpa()
 
 	// valor inicial de cada jogador
-	jogador1 = 0
-     jogador2 = 0
+	placarA = 0
+     placarB = 0
      
        faca {
        	escreva("Jogador ", nome1, " escolha sua jogada: \n")
         	escreva("[1] PEDRA\n")
         	escreva("[2] TESOURA\n")
         	escreva("[3] PAPEL\n")
-        	leia(jogada1a)
-        	jogada1b = valida_numero(jogada1a)
-        	
+        	leia(jogadaA)
+        	jogadaA_int = valida_numero(jogadaA)
         	limpa()
+        	
         	escreva("Jogador ", nome2, " escolha sua jogada: \n")
         	escreva("[1] PEDRA\n")
         	escreva("[2] TESOURA\n")
         	escreva("[3] PAPEL\n")
-        	leia(jogada2a)
-       	jogada2b = valida_numero(jogada2a)
-       	
+        	leia(jogadaB)
+       	jogadaB_int = valida_numero(jogadaB)
+       	limpa()
         
         //pedra
-        se (jogada1b == 1 e jogada2b == 1){
+        se (jogadaA_int == 1 e jogadaB_int == 1){
         		escreva("EMPATE!\n")
         }
-        senao se (jogada1b == 1 e jogada2b == 2){
-        		jogador1 = jogador1++
+        senao se (jogadaA_int == 1 e jogadaB_int == 2){
+        		placarA = placarA++
         }
-        senao se (jogada1b == 1 e jogada2b == 3){
-        	jogador2 = jogador2++
+        senao se (jogadaA_int == 1 e jogadaB_int == 3){
+        	placarB = placarB++
         }
         //tesoura
-        senao se (jogada1b == 2 e jogada2b == 2){
+        senao se (jogadaA_int == 2 e jogadaB_int == 2){
         		escreva("EMPATE!\n")
         }
-        senao se (jogada1b == 2 e jogada2b == 1){
-        		jogador2 = jogador2++
+        senao se (jogadaA_int == 2 e jogadaB_int == 1){
+        		placarB = placarB++
         }
-        senao se (jogada1b == 2 e jogada2b == 3){
-        	jogador1 = jogador1++
+        senao se (jogadaA_int == 2 e jogadaB_int == 3){
+        	placarA = placarA++
         }
         //papel
-        senao se (jogada1b == 3 e jogada2b == 3){
+        senao se (jogadaA_int == 3 e jogadaB_int == 3){
         		escreva("EMPATE!\n")
         }
-        senao se (jogada1b == 3 e jogada2b == 1){
-        		jogador1 = jogador1++
+        senao se (jogadaA_int == 3 e jogadaB_int == 1){
+        		placarA = placarA++
         }
-        senao se (jogada1b == 3 e jogada2b == 2){
-        	jogador2 = jogador2++
+        senao se (jogadaA_int == 3 e jogadaB_int == 2){
+        	placarB = placarB++
         }
-       
-	  escreva("Jogar mais uma vez? \n")
+	  escreva("\n PLACAR PARCIAL: \n")
+       escreva(nome1," ", placarA, " x ", placarB, " ",  nome2)	
+	  escreva("\nJogar mais uma vez? \n")
 	  escreva("[Y] para sim\n")
 	  escreva("[N] para não\n")
 	  leia(resposta)
+	  limpa()
        
        } enquanto (resposta == 'y')
         	
-
-        
-        escreva(nome1," ", jogador1, " x ", jogador2, " ",  nome2)	
-        
+	   
+        escreva("RESULTADO FINAL!\n")
+        escreva(nome1+" "+placarA+" x "+placarB+" "+nome2+"\n")	
+        se (placarA > placarB){
+	   	escreva("Parabéns "+nome1+" você venceu!")
+	   }
+	   senao se (placarA < placarB){
+	   	escreva("Parabéns "+nome2+" você venceu!")
+	   }
+	   senao {
+	   	escreva("Partida empatada!")
+	   }
         
 	}
 }
@@ -123,7 +119,7 @@ papel = 3		3x3 = x | 3x1 = 3 | 3x2 = 2
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1141; 
+ * @POSICAO-CURSOR = 198; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
