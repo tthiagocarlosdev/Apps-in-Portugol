@@ -26,7 +26,7 @@ programa {
 		escreva("|_______|  \\______/  |_| \\_\\ |______| |_ /  |_| |_|        \\______/\n")
 		escreva("\n")
 	}
-	//\\//\\//\\//INÍCIO DO PROGRAMA\\//\\//INÍCIO DO PROGRAMA\\//INÍCIO DO PROGRAMA\\//\\//\\//
+	/*INÍCIO DO PROGRAMA*/
 	funcao inicio() {
 	inteiro tipo
 	escreva("Escolha o tipo de jogo: \n")
@@ -57,7 +57,7 @@ programa {
 		   	limpa()
 			jogada_intM = Util.sorteia(1,3)
 		        
-				//pedra
+				/*pedra*/
 				se (jogada_intH == 1 e jogada_intM == 1){
 		        		escreva("EMPATE!\n")
 		        	}
@@ -67,7 +67,7 @@ programa {
 		        	senao se (jogada_intH == 1 e jogada_intM == 3){
 		        		placarM = placarM++
 		        	}
-		        	//tesoura
+		        	/*tesoura*/
 		        	senao se (jogada_intH == 2 e jogada_intM == 2){
 		        		escreva("EMPATE!\n")
 		        	}
@@ -77,7 +77,7 @@ programa {
 		        	senao se (jogada_intH == 2 e jogada_intM == 3){
 		        		placarH = placarH++
 		        	}
-		        	//papel
+		        	/*papel*/
 		       	senao se (jogada_intH == 3 e jogada_intM == 3){
 		        		escreva("EMPATE!\n")
 		        	}
@@ -106,7 +106,7 @@ programa {
 			}	
 			  	limpa()
 		       
-		}enquanto (resposta == "y") //fim faça
+		}enquanto (resposta == "y") /*fim faça*/
 
 		cabecalho()		   
 			escreva("RESULTADO FINAL!\n")
@@ -122,7 +122,7 @@ programa {
 				}
 		pare
 		
-		//\\//\\//\\HUMANO x HUMANO//\\//\\//\\
+		/*HUMANO x HUMANO*/
 		caso 2:
 			inteiro placarA, placarB, jogadaA_int, jogadaB_int
 		     cadeia nome1, nome2, jogadaA, jogadaB
@@ -139,7 +139,7 @@ programa {
 		     nome2 = Texto.caixa_alta(nome2)
 			limpa()
 
-			// valor inicial de cada jogador
+			/* valor inicial de cada jogador*/
 			placarA = 0
 		     placarB = 0
      
@@ -160,7 +160,7 @@ programa {
 			     jogadaB_int = valida_numero(jogadaB)
 			     limpa()
 			        
-					//pedra
+					/*pedra*/
 					se (jogadaA_int == 1 e jogadaB_int == 1){
 			        		escreva("EMPATE!\n")
 			        	}
@@ -170,7 +170,7 @@ programa {
 			        	senao se (jogadaA_int == 1 e jogadaB_int == 3){
 			        		placarB = placarB++
 			        	}
-			        	//tesoura
+			        	/*tesoura*/
 			        	senao se (jogadaA_int == 2 e jogadaB_int == 2){
 			        		escreva("EMPATE!\n")
 			        	}
@@ -180,7 +180,7 @@ programa {
 			        	senao se (jogadaA_int == 2 e jogadaB_int == 3){
 			        		placarA = placarA++
 			        	}
-			        	//papel
+			        	/*papel*/
 			       	senao se (jogadaA_int == 3 e jogadaB_int == 3){
 			        		escreva("EMPATE!\n")
 			        	}
@@ -209,9 +209,9 @@ programa {
 				}	
 				  	limpa()
 			       
-			}enquanto (resposta == "y") // fim faça
+			}enquanto (resposta == "y") /* fim faça*/
 		
-			//\\//\\RESULTADO FINAL\\//\\//
+			/*RESULTADO FINAL*/
 			cabecalho()		   
 			escreva("RESULTADO FINAL!\n")
 			escreva(nome1+" "+placarA+" x "+placarB+" "+nome2+"\n")	
@@ -225,9 +225,9 @@ programa {
 					escreva("Partida empatada!")
 				}
 		pare
-	}//fim escolha 
-	}// fim função início
-}//fim programa
+	} /* fim escolha */
+	} /* fim função início*/
+} /* fim programa*/
 
 
 /*
@@ -247,7 +247,7 @@ papel = 3		3x3 = x | 3x1 = 3 | 3x2 = 2
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 6997; 
+ * @POSICAO-CURSOR = 6866; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
