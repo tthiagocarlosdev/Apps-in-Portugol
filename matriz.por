@@ -39,7 +39,7 @@ programa
 		}
 		retorne NumA
 	}
-	
+	// inicio programa
 	funcao inicio()
 	{
 		inteiro valorMatriz = 0, tipoMatriz = 0, outraMatriz = 0
@@ -152,8 +152,7 @@ programa
 							escreva("\n")
 						}
 						pare
-					}//fim escolha
-		
+					}//fim escolha		
 					
 				escreva("\n")
 				escolhaMatriz()
@@ -162,16 +161,11 @@ programa
 					
 			}enquanto (tipoMatriz < 8)//fim faca 2
 			outraMatriz = tipoMatriz
-		/*escreva("[8] Gerar outra Matriz\n")
-		escreva("[9] Encerrar Programa\n")*/
 		
 		}enquanto(outraMatriz < 9) //fim faca 1
 		
-
-		
 		escreva("\nPrograma encerrado!\n")
-		
-		
+				
 	}//fim funcao programa
 }
 /* $$$ Portugol Studio $$$ 
@@ -179,7 +173,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4562; 
+ * @POSICAO-CURSOR = 1051; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
