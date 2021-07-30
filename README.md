@@ -11,5 +11,6 @@ My applications built in **Portugol**.
 3. Jokenpo :fist_raised: :raised_hand_with_fingers_splayed: :v:
 4. Palíndromo  
 5. Validação de inteiro :on: 
-6. matriz 
+6. matriz
 7. sorteiaDado :game_die: 
+
