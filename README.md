@@ -12,3 +12,4 @@ My applications built in **Portugol**.
 4. Palíndromo  
 5. Validação de inteiro :on: 
 6. matriz 
+7. sorteiaDado :game_die: 
