@@ -13,3 +13,4 @@ My applications built in **Portugol**.
 5. Validação de inteiro :on: 
 6. matriz 
 7. sorteiaDado :game_die: 
+8. Sistema de Cadastro de Usuários :man_technologist:
