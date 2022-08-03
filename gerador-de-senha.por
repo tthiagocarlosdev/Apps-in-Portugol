@@ -27,13 +27,13 @@ programa
 	}
 		
 	funcao inicio(){
-		inteiro ascii[93], t, minimo, simbolo = 0, numeros = 0, letra_minuscula = 0, letra_maiuscula = 0
+		inteiro ascii[93], numero_de_caracteres, minimo, simbolo = 0, numeros = 0, letra_minuscula = 0, letra_maiuscula = 0
 		cadeia senha[93]
 		logico letra, quantidade_caracteres = falso
 		cadeia cad
 		
 		topo()
-		escreva("Digite o tamanho de sua senha [6-91]: ")
+		escreva("Digite o tamanho de sua senha [6-39]: ")
 		leia(cad)
 		escreva("--------------------------------\n")
 
@@ -43,42 +43,42 @@ programa
 			limpa()
 			escreva("==== ATENÇÃO! ====\n")
 			escreva("Valor incorreto!\n")
-			escreva("Digite outro valor [6-91]: ")
+			escreva("Digite outro valor [6-39]: ")
 			leia(cad)
 			letra = Tipos.cadeia_e_inteiro(cad, 10)
 		}
 		
 		//validação do tamanho da senha
-		t = Tipos.cadeia_para_inteiro(cad, 10)
-		enquanto (t < 6 ou t > 91){
+		numero_de_caracteres = Tipos.cadeia_para_inteiro(cad, 10)
+		enquanto (numero_de_caracteres < 6 ou numero_de_caracteres > 39){
 			limpa()
-			se (t < 6){
+			se (numero_de_caracteres < 6){
 				escreva("==== ATENÇÃO! ====\n")
 				escreva("Valor menor que 6, senha muito insegura!\n")
 				escreva("Digite outro valor [6-91]: ")
-				leia(t)
+				leia(numero_de_caracteres)
 			}
-			senao se (t > 91){
+			senao se (numero_de_caracteres > 39){
 				escreva("==== ATENÇÃO! ====\n")
 				escreva("Valor indisponível!\n")
 				escreva("Digite outro valor [6-91]: ")
-				leia(t)
+				leia(numero_de_caracteres)
 			}
 		}
 
-		minimo = t/4
+		minimo = numero_de_caracteres/4
 		limpa()
 		
 		//sorteio do valores da escala ascii
 		enquanto(quantidade_caracteres == falso){
 			//sorteio do valores da escala ascii
-		    	para(inteiro d = 0; d < t; d++) {
+		    	para(inteiro d = 0; d < numero_de_caracteres; d++) {
 				ascii[d] = Util.sorteia(33, 126)
 		    	}		
 		    	//validação para não repetir caracteres na senha
-		    	para (inteiro a = 0; a < t-1; a++){
-				para (inteiro b = a+1; b < t; b++){
-				    enquanto (ascii[a] == ascii[b] ou ascii[a] == 39 ou ascii[b] == 39){
+		    	para (inteiro a = 0; a < numero_de_caracteres-1; a++){
+				para (inteiro b = a+1; b < numero_de_caracteres; b++){
+				    enquanto (ascii[a] == ascii[b]){
 					    ascii[b] = Util.sorteia(33, 126)
 						    a = 0
 						    b = 1
@@ -87,7 +87,7 @@ programa
 		    	}
 			
 			//validação quantidade dos tipos de caracteres
-			para(inteiro c = 0; c < t; c++){
+			para(inteiro c = 0; c < numero_de_caracteres; c++){
 				se (ascii[c] >= 33 e ascii[c] <= 47 ou ascii[c] >= 58 e ascii[c] <= 64 ou ascii[c] >= 91 e ascii[c] <= 96 ou ascii[c] >= 122 e ascii[c] <= 126){
 					simbolo = simbolo++
 				}
@@ -114,7 +114,7 @@ programa
 		}
 		
 		//confecção de senha a partir da tabela ascii
-		para(inteiro c = 0; c < t; c++) {	
+		para(inteiro c = 0; c < numero_de_caracteres; c++) {	
 			se (ascii[c] == 33){
 				senha[c] = "!"
 			}
@@ -133,9 +133,9 @@ programa
 			senao se  (ascii[c] == 38){
 				senha[c] = "&"
 			}
-			senao se  (ascii[c] == 39)// """ CARACTER NÃO DISPONÍVEL
+			senao se  (ascii[c] == 39)
 			{
-				senha[c] = " "
+				senha[c] = "\""
 			}
 			senao se  (ascii[c] == 40){
 				senha[c] = "("
@@ -403,9 +403,9 @@ programa
 
 		//revelando a senha
 		topo()
-		escreva("A senha contém ", t, " caracteres!\n")
+		escreva("A senha contém ", numero_de_caracteres, " caracteres!\n")
 		escreva("Sua senha é: ")
-		para(inteiro i = 0; i < t; i++) {
+		para(inteiro i = 0; i < numero_de_caracteres; i++) {
 			escreva(senha[i], "")}
 		escreva("\n--------------------------------")
 		escreva("\n")
@@ -424,9 +424,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 0; 
+ * @POSICAO-CURSOR = 706; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {t, 30, 21, 1}-{letra, 32, 9, 5}-{cad, 33, 9, 3};
+ * @SIMBOLOS-INSPECIONADOS = {letra, 32, 9, 5}-{cad, 33, 9, 3};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
