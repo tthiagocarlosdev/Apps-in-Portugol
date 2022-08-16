@@ -115,121 +115,124 @@ programa
 		
 		//confecção de senha a partir da tabela ascii
 		para(inteiro c = 0; c < numero_de_caracteres; c++) {
-			se (ascii[c] == 33){
-				senha[c] = "!"
+			escolha(ascii[c]){
+				caso 33:
+					senha[c] = "!"
+				pare
+				caso 34:
+					senha[c] = "'"
+				pare
+				caso 35:
+					senha[c] = "#"
+				pare
+				caso 36:
+					senha[c] = "$"
+				pare
+				caso 37:
+					senha[c] = "%"
+				pare
+				caso 38:
+					senha[c] = "&"
+				pare
+				caso 39:
+					senha[c] = "\""
+				pare
+				caso 40:
+					senha[c] = "("
+				pare
+				caso 41:
+					senha[c] = ")"
+				pare
+				caso 42:
+					senha[c] = "*"
+				pare
+				caso 43:
+					senha[c] = "+"
+				pare
+				caso 44:
+					senha[c] = ","
+				pare
+				caso 45:
+					senha[c] = "-"
+				pare
+				caso 46:
+					senha[c] = "."
+				pare
+				caso 47:
+					senha[c] = "/"
+				pare
+				caso 48:
+					senha[c] = "0"
+				pare
+				caso 49:
+					senha[c] = "1"
+				pare
+				caso 50:
+					senha[c] = "2"
+				pare
+				caso 51:
+					senha[c] = "3"
+				pare
+				caso 52:
+					senha[c] = "4"
+				pare
+				caso 53:
+					senha[c] = "5"
+				pare
+				caso 54:
+					senha[c] = "6"
+				pare
+				caso 55:
+					senha[c] = "7"
+				pare
+				caso 56:
+					senha[c] = "8"
+				pare
+				caso 57:
+					senha[c] = "9"
+				pare
+				caso 58:
+					senha[c] = ":"
+				pare
+				caso 59:
+					senha[c] = ";"
+				pare
+				caso 60:
+					senha[c] = "<"
+				pare
+				caso 61:
+					senha[c] = "="
+				pare
+				caso 62:
+					senha[c] = ">"
+				pare
+				caso 63:
+					senha[c] = "?"
+				pare
+				caso 64:
+					senha[c] = "@"
+				pare
+				caso 65:
+					senha[c] = "A"
+				pare
+				caso 66:
+					senha[c] = "B"
+				pare
+				caso 67:
+					senha[c] = "C"
+				pare
+				caso 68:
+					senha[c] = "D"
+				pare
+				caso 69:
+					senha[c] = "E"
+				pare
+				caso 70:
+					senha[c] = "F"
+				pare
 			}
-			senao se (ascii[c] == 34){
-				senha[c] = "'"
-			}
-			senao se (ascii[c] == 35){
-				senha[c] = "#"
-			}
-			senao se  (ascii[c] == 36){
-				senha[c] = "$"
-			}
-			senao se  (ascii[c] == 37){
-				senha[c] = "%"
-			}
-			senao se  (ascii[c] == 38){
-				senha[c] = "&"
-			}
-			senao se  (ascii[c] == 39)
-			{
-				senha[c] = "\""
-			}
-			senao se  (ascii[c] == 40){
-				senha[c] = "("
-			}
-			senao se  (ascii[c] == 41){
-				senha[c] = ")"
-			}
-			senao se  (ascii[c] == 42){
-				senha[c] = "*"
-			}
-			senao se  (ascii[c] == 43){
-				senha[c] = "+"
-			}
-			senao se  (ascii[c] == 44){
-				senha[c] = ","
-			}
-			senao se  (ascii[c] == 45){
-				senha[c] = "-"
-			}
-			senao se  (ascii[c] == 46){
-				senha[c] = "."
-			}
-			senao se  (ascii[c] == 47){
-				senha[c] = "/"
-			}
-			senao se  (ascii[c] == 48){
-				senha[c] = "0"
-			}
-			senao se  (ascii[c] == 49){
-				senha[c] = "1"
-			}
-			senao se  (ascii[c] == 50){
-				senha[c] = "2"
-			}
-			senao se  (ascii[c] == 51){
-				senha[c] = "3"
-			}
-			senao se  (ascii[c] == 52){
-				senha[c] = "4"
-			}
-			senao se  (ascii[c] == 53){
-				senha[c] = "5"
-			}
-			senao se  (ascii[c] == 54){
-				senha[c] = "6"
-			}
-			senao se  (ascii[c] == 55){
-				senha[c] = "7"
-			}
-			senao se  (ascii[c] == 56){
-				senha[c] = "8"
-			}
-			senao se  (ascii[c] == 57){
-				senha[c] = "9"
-			}
-			senao se  (ascii[c] == 58){
-				senha[c] = ":"
-			}
-			senao se  (ascii[c] == 59){
-				senha[c] = ";"
-			}
-			senao se  (ascii[c] == 60){
-				senha[c] = "<"
-			}
-			senao se  (ascii[c] == 61){
-				senha[c] = "="
-			}
-			senao se  (ascii[c] == 62){
-				senha[c] = ">"
-			}
-			senao se  (ascii[c] == 63){
-				senha[c] = "?"
-			}
-			senao se  (ascii[c] == 64){
-				senha[c] = "@"
-			}
-			senao se  (ascii[c] == 65){
-				senha[c] = "A"
-			}
-			senao se  (ascii[c] == 66){
-				senha[c] = "B"
-			}
-			senao se  (ascii[c] == 67){
-				senha[c] = "C"
-			}
-			senao se  (ascii[c] == 68){
-				senha[c] = "D"
-			}
-			senao se  (ascii[c] == 69){
-				senha[c] = "E"
-			}
-			senao se  (ascii[c] == 70){
-				senha[c] = "F"
-			}
+			
+			
 			senao se  (ascii[c] == 71){
 				senha[c] = "G"
 			}
@@ -424,9 +427,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 7944; 
+ * @POSICAO-CURSOR = 5055; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {letra, 32, 9, 5}-{cad, 33, 9, 3};
+ * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
